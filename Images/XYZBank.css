@@ -1,0 +1,208 @@
+body /* This body tag requires the use of one of the sets of banner and/or text div ids */
+	{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background: Blue; 
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	width: 100%;
+	/*overflow: expression('hidden');*/
+	}
+
+.FormField {font-size: 10pt; font-family: Verdana,Arial,Helvetica, Serif}
+
+.TableHeaderStyle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-color:#006699;
+	background-color: #82c8f5;
+	padding: 2px;
+	font-weight: bold;
+	font-style: normal;
+	color: #006699;	
+}
+
+.TableFrameStyle {
+	border: 1px solid #006699;
+}
+
+.TableSelectedRow {
+	background-color: #FFCC99;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #006699;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.TableRowAlternative {
+	background-color: #dff0fb;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #006699;
+	text-decoration: none;
+}
+
+.TableRowDefault {
+	background-color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #006699;
+	text-decoration: none;
+}
+
+.TabDefaultStyle {
+	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #069;
+	background-color: #ffffff;
+}
+
+.TabHoverStyle {
+	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #069;
+	background-color: #2d80b6;
+}
+
+.TabSelectedStyle {
+	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #069;
+	background-color: #dff0fb;
+}
+
+.SectionHeaderStyle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #dff0fb;
+	width: 50%;
+	font-weight: bold;
+	color: #069;
+}
+.SectionPanelStyle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	width: 50%;
+	font-weight: normal;
+	color: #006699;
+	background-color: #dff0fb;
+	border: 1px solid #006699;
+}
+
+
+.TextBox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: white;
+	border-color:#330099;
+	border-width: 1px;
+}
+.txtLabel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: normal;
+	color: #ffffff;
+}
+.DropDown {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: normal;
+	color: #006699;
+	background-color: #dff0fb;
+	border: thin solid #006699;
+	}
+.hyperlink {
+	color: #5ba7d8;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.RadioButtonList {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: normal;
+	color: #006699;
+	border: 0px solid #006699;
+}
+
+.HorizontalRule {
+	color: #006699;
+}
+
+.CheckBox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: normal;
+	color: #006699;
+}
+
+.button {
+	cursor:pointer;
+	border:1px outset #069;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding: 1px 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	background-color: #069;
+}
+
+.Calendar {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: small-caps;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #069;
+	padding: 0px;
+}
+
+.Panel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #006699;
+	background-color: #dff0fb;
+	border-top-color: #006699;
+	border-right-color: #006699;
+	border-bottom-color: #006699;
+	border-left-color: #006699;
+}
+
+a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #006699;
+	text-decoration: underline;
+}
+
+a:visited {
+	font-weight: bold;
+	color: #2c81b7;
+	text-decoration: underline;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #cdcdcd;
+	text-decoration: underline;
+}
