@@ -1,0 +1,30 @@
+*** NEW FILE
+ID: task_F46EB4BEE12548A4A5306536512F149D
+TITLE: Printing a separator sheet
+HREF: KC_separatorsheetutility\t_printsepsheet.html
+SUMMARY:
+In the Barcode Value field, enter a string to be generated in the bar code using Code 128 format.
+RAWTEXT:
+Printing a separator sheet In the Barcode Value field, enter a string to be generated in the bar code using Code 128 format. If you enter the name of a document type, the program can be configured to look for this name and use it for classification. At Patch Code Type, use the drop-down list to select the patch code type. Notice that the patch code is displayed in the separator sheet preview window. Do one of the following: On the Separator Sheet Utility main window, click the Print button. On the Separator Sheet Utility main window, press Ctrl+P. On the File menu, select Print. From the Print window, select the options for the printer type and the number of copies to print. Click OK. The separator sheet is printed.
+CLEANTEXT:
+printing a separator sheet in the barcode value field  enter a string to be generated in the bar code using code 128 format  if you enter the name of a document type  the program can be configured to look for this name and use it for classification  at patch code type  use the drop down list to select the patch code type  notice that the patch code is displayed in the separator sheet preview window  do one of the following  on the separator sheet utility main window  click the print button  on the separator sheet utility main window  press ctrl p  on the file menu  select print  from the print window  select the options for the printer type and the number of copies to print  click ok  the separator sheet is printed 
+*** NEW FILE
+ID: concept_2A6B9F96FCF94188B281A9961BEB45FE
+TITLE: File menu
+HREF: KC_separatorsheetutility\c_filemenuseputil.html
+SUMMARY:
+Use the File menu to set up print options, print separator sheets, and to exit the Separator Sheet Utility.
+RAWTEXT:
+File menu Use the File menu to set up print options, print separator sheets, and to exit the Separator Sheet Utility. Print Setup Opens the Print window, where you can select a printer model, paper type, and paper orientation. Also, you can select the Properties button to define additional properties for your printer type. Print Opens the Print window, which gives you options for defining a page range and the number of copies to print. Select the Properties button to define additional properties for your printer type. Exit Closes the Separator Sheet Utility.
+CLEANTEXT:
+file menu use the file menu to set up print options  print separator sheets  and to exit the separator sheet utility  print setup opens the print window  where you can select a printer model  paper type  and paper orientation  also  you can select the properties button to define additional properties for your printer type  print opens the print window  which gives you options for defining a page range and the number of copies to print  select the properties button to define additional properties for your printer type  exit closes the separator sheet utility 
+*** NEW FILE
+ID: concept_E154E07049C344FA9652C8B075F48225
+TITLE: Separator Sheet Utility
+HREF: KC_separatorsheetutility\c_sepsheetutil.html
+SUMMARY:
+With the Separator Sheet Utility, you can create and print separator sheets.
+RAWTEXT:
+Separator Sheet Utility With the Separator Sheet Utility, you can create and print separator sheets. The separator sheets contain patch codes to separate the documents. During processing, the program recognizes the separator sheet and reads the bar code.
+CLEANTEXT:
+separator sheet utility with the separator sheet utility  you can create and print separator sheets  the separator sheets contain patch codes to separate the documents  during processing  the program recognizes the separator sheet and reads the bar code 

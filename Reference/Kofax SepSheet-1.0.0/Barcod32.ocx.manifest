@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+	<file name="Barcod32.ocx" hashalg="SHA1">
+		<comClass clsid="{2200CD20-1176-101D-85F5-0020AF1EF604}"
+				tlbid="{2200CD23-1176-101D-85F5-0020AF1EF604}"
+				description="Mabry BarCod Control">
+		</comClass>
+		<typelib tlbid="{2200CD23-1176-101D-85F5-0020AF1EF604}"
+				resourceid="1" version="1.6" helpdir="">
+		</typelib>
+	</file>
+	<comInterfaceExternalProxyStub
+			name="_DBarcod"
+			iid="{2200CD21-1176-101D-85F5-0020AF1EF604}"
+			tlbid="{2200CD23-1176-101D-85F5-0020AF1EF604}"
+			proxyStubClsid32="{00020420-0000-0000-C000-000000000046}">
+	</comInterfaceExternalProxyStub>
+	<comInterfaceExternalProxyStub
+			name="_DBarcodEvents"
+			iid="{2200CD22-1176-101D-85F5-0020AF1EF604}"
+			tlbid="{2200CD23-1176-101D-85F5-0020AF1EF604}"
+			proxyStubClsid32="{00020420-0000-0000-C000-000000000046}">
+	</comInterfaceExternalProxyStub>
+</assembly>

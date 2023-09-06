@@ -1,0 +1,88 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SepSheet
+</name>
+</assembly>
+<members>
+<member name="P:Kofax.SepSheet.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strAboutContent">
+	<summary>
+  Looks up a localized string similar to Kofax Separator Sheet Utility
+
+Version {ProductVersion}
+
+Copyright © 1994-2017 Kofax, Inc. U.S. Patent No. 6,370,277 All rights reserverd. Use is subject to license terms..
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strBarcodeCaption">
+	<summary>
+  Looks up a localized string similar to Barcode "{0}".
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strCode128">
+	<summary>
+  Looks up a localized string similar to CODE128.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strForHelpPressF1">
+	<summary>
+  Looks up a localized string similar to  For Help, Press F1.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strInvalidFormTypeName">
+	<summary>
+  Looks up a localized string similar to The barcode value is too long or contains characters that are not supported by the bar code type or by the current printer settings. Refer to your bar code documentation for details about the characters supported by the bar code..
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strLandscapeFeed">
+	<summary>
+  Looks up a localized string similar to Landscape Feed.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strNewDocumentFollows">
+	<summary>
+  Looks up a localized string similar to New Document Follows....
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strNone">
+	<summary>
+  Looks up a localized string similar to None.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strPortraitFeed">
+	<summary>
+  Looks up a localized string similar to Portrait Feed.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strPreviewPageIsBlank">
+	<summary>
+  Looks up a localized string similar to Preview page is blank.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strPrintedOn">
+	<summary>
+  Looks up a localized string similar to Printed on {0}.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strSeparatorSheetDescription">
+	<summary>
+  Looks up a localized string similar to This is a {0} type separator sheet..
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strSpecifySeparatorSheetType">
+	<summary>
+  Looks up a localized string similar to (Specify Separator Sheet Type).
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strUnhandledException">
+	<summary>
+  Looks up a localized string similar to Unhandled exception: {0}.
+</summary>
+</member><member name="P:Kofax.SepSheet.My.Resources.Resources.strWarnPrinterDpi">
+	<summary>
+  Looks up a localized string similar to The current printer is set at {0}  DPI.  It must support 600 DPI in order to print separator sheets correctly..
+</summary>
+</member><member name="T:Kofax.SepSheet.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

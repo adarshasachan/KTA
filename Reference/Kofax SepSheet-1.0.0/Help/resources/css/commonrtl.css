@@ -1,0 +1,1236 @@
+/*<meta />*/
+body
+{
+font-family: Arial;
+font-size: 10pt;
+margin: 0px;
+line-height: 1.7em;
+}
+
+header
+{
+}
+
+main
+{
+	visibility: hidden;
+}
+
+div#wrapper
+{
+display: inline-block;
+float: left;
+padding: 25px; 
+padding-top: 0px; 
+width: 78%;
+border-right: 1px solid #f3f3f3;
+min-height: 500px; 
+position: relative;
+
+}
+nav[role=toc]
+{
+bottom: 0px; 
+position: relative;
+float: right;
+width: 20%;
+padding-bottom: 10px; 
+padding-top: 10px; 
+
+}
+
+.footer
+{
+display: block;
+margin-top: 20px;
+padding: 10px;
+font-size: .85em;
+border-top: 1px solid #e3e3e3;
+bottom: 5px;
+margin-right: -25px; 
+margin-right: -25px; 
+clear: both;
+}
+
+button.contextbutton
+{
+background: url("../images/rightarrow.png");
+background-repeat: no-repeat;
+background-position: top right;
+display: block;
+height: 90%;
+width: 300px; 
+border: solid 0px white;
+position: absolute;
+right: 50%; 
+top: 65px; 
+z-index: 1;
+}
+
+
+
+nav[role=toc] a, nav[role=toc] li.active ul li a, .breadcrumbs a
+{
+color: #777777;
+}
+
+nav[role=toc] a:hover, nav[role=toc] li.active a
+{
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+color: #0071b9;
+text-decoration: none;
+}
+
+
+nav[role=toc] li
+{
+list-style: none;
+margin-right: -10px; 
+padding-top: 3px;
+padding-bottom: 0px;
+margin-bottom: 0px; 
+}
+
+
+.menu
+{
+	display: block;
+	vertical-align: middle;
+	position: relative;
+    /* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+	background-color: #0071b9;
+	/* [Kofax] 2017-Jan-13 MAS: Align with TOC text for bug 761483. */
+	padding-right: 20px;
+	border-top: 2px solid #ffffff;
+	color: #ffffff; 
+	padding-top: 1px; 
+	padding-bottom: 1px; 
+	font-size: 11pt;
+	line-height: 35px; 
+}
+.menu button, .menu span.menuLabel, .menu span.help
+{
+	/* [Kofax] 2017-Jan-13 MAS: Removed white separator since it cannot line up with body content.
+	 * For bug 761483. */
+	/*border: 0px solid white;*/
+	background-color: transparent;
+	height: 35px; 
+	padding-right: 15px; 
+	padding-right: 15px; 
+	display: inline-block;
+	line-height: 35px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	
+}
+
+.menu span.menuLabel
+{
+	padding-right: 5px; 
+	padding-right: 30px; 
+	border-right: 1px solid #ffffff;
+}
+
+.menu span.menuLabel a:hover
+{
+	background:transparent;
+}
+.menu span.help
+{
+	padding-right: 15px; 
+	padding-right: 15px; 
+}
+
+.menu a
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+.menu .dropdown-menu
+{
+	border: 0px solid;
+	border-radius: 0px;
+	/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+	background-color: #0071b9;
+	font-size: 11pt;
+	color: #ffffff;
+	margin-top: 12px; 
+	padding: 0px; 
+}
+.menu li
+{
+	margin-bottom: 0px; 
+	margin-top: 0px; 
+
+}
+.menu .dropdown-menu li a
+{
+	color: #ffffff;
+	padding-bottom: 8px; 
+	padding-top: 8px;
+}
+.menu a:hover, .menu span.help:hover, .menu button:hover, .menu .dropdown-menu li a:hover
+{
+	/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+    background-color: #0071b9;
+	text-decoration: none;
+	cursor: pointer;
+	color: #ffffff;
+}
+
+/* [Kofax] 2017-Jan-13 MAS: Add yellow text color for hover to give a visual cue to users. */
+.menu button:hover, .menu .dropdown-menu li a:hover
+{
+    color: #fffb30;
+}
+
+.dropdown-menu.example
+{
+	position: relative; 
+	border-radius: 0px; 
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	padding: 10px;
+	padding-right: 25px; 
+	font-size: 10pt; 
+	margin: 0px; 
+	float: none;
+	background-color: #ffffff;
+	border: 0px solid #ffffff;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: -1px;
+}
+
+.dropdown-menu.example p:first-child
+{
+	margin-top: 0px; 
+}
+
+.dropdown-menu.example p:last-child
+{
+	margin-bottom: 0px; 
+}
+button.exampleTitle, button.searchTips
+{
+	border: 0px solid #1C64B4;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	background: url("../images/dropdownopen.png");
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+    background-position: right center; 
+	padding: 5px; 
+	padding-right: 25px; 
+	border-radius: 1px; 
+	width: 100%;
+	-webkit-box-shadow: none;
+	font-weight: 600;
+	text-align: right;
+	margin-bottom: -1px;
+
+}
+button.exampleTitle:hover
+{
+	border: 0px solid #777777;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+button.exampleTitle:focus, .dropdown.example.open button.exampleTitle
+{
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+
+.dropdown.example.open button.exampleTitle, .dropdown.example.open button.exampleTitle:hover
+{
+	border-bottom: 0px; 
+	background: url("../images/dropdownclose.png");
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: right center;
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);		
+}
+
+
+button.contextbutton.active
+{
+background: url("../images/context.png");
+background-repeat: no-repeat;
+background-position: center; 
+display: block;
+height: 16px; 
+width: 20px; 
+border: solid 0px white;
+right: 0%;
+right: 5px; 
+top: 65px; 
+margin-bottom: 20px; 
+}
+button.contextbutton.active:focus, button.contextbutton:focus, .searchButton:focus, button.dropdownbutton:focus, button.exampleTitle:focus, button.searchTips:focus
+{
+	outline: 0px; 
+}
+a.logo
+{
+display: inline-block;
+padding: 25px;
+margin-right: 20px; 
+padding-bottom: 5px; 
+height: 50px; 
+width: 150px; 
+clear: both;
+float: right;
+
+}
+
+.searchButton
+{
+	background-color: transparent;
+	background-image: url("../images/search-white.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	width: 20px;
+	height: 28px;
+	margin-right: 10px; 
+	border: solid 0px #ffffff;
+	display: inline-block;
+	left: 50px; 
+	
+}
+.searchInput
+{
+padding-bottom: 15px; 
+display: inline-block;
+float: left;
+width: 30%;
+}
+#searchbox
+{
+	border: solid 2px #e7e7e7;
+	width: 80%;
+	line-height: 1; 
+	padding: 5px; 
+}
+button.searchTips
+{
+border: 0px solid #1C64B4;
+	vertical-align: top;
+    font-size: smaller;
+	border: 0px; 
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+	margin-top: -10px;
+	padding: 0px; 
+	background-color: transparent;
+	background-image: url("../images/tip.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: inline-block;
+	width: 50px; 
+	height: 30px; 
+	float: left;
+}
+
+.dropdown.searchTips.open button.searchTips
+{
+	background-image: url("../images/tip-close.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+
+
+.dropdown-menu.tips
+{
+	border-radius: 0px; 
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	font-size: 10pt; 
+	margin: 0px; 
+	border: solid 1px #e7e7e7;
+	margin-bottom: -1px;
+	width: 100%;
+	float: left;
+	padding: 10px; 
+	margin-right: 10px; 
+}
+
+.dropdown-menu.tips p
+{
+	margin-top: 0px; 
+	margin-bottom: 2px; 
+	padding-right: 5px; 
+}
+
+.dropup.searchTips.open .tips
+{
+	display: block;
+}
+div.tips
+{
+	
+}
+
+input
+{
+	vertical-align: top;
+}
+
+.searchResults 
+{
+	padding: 10px; 
+	padding-top: 20px; 
+	color: #777777;
+}
+
+.noResults
+{
+	padding: 5px; 
+	margin: 5px; 
+}
+
+.searchResults div
+{
+	margin-top: 10px; 
+	margin-bottom: 20px; 
+	width: 65%;
+}
+
+div.searchTips
+{
+	display: inline-block;
+	margin-top: 0px; 
+	padding-top: 0px;
+	margin-top: 2px; 
+	margin-bottom: 2px; 
+	width: 35%;
+}
+#searchTips
+{
+	margin: 0px; 
+	width: 100%;
+}
+.searchlink
+{
+	color: #008fd6;
+	text-decoration: underline;
+	font-size: 16px;
+}
+h1.searchContainerTitle
+{
+	color: #777777;
+	font-size: 15pt; 
+	margin-top: 0px; 
+	margin-bottom: 15px; 
+	display: inline-block;
+	width: 65%;
+}
+
+.searchemphasis
+{
+	font-weight: 700;
+}
+
+.summaryemphasis
+{
+	color: #000000;
+}
+
+div.summary
+{
+	font-size: 13px; 
+	color: #777777;
+	margin-top: 2px; 
+	margin-bottom: 2px; 
+	width: 100%;
+	padding-left: 10px; 
+}
+
+
+div.headcontainer
+{
+	padding-top: 10px;
+	background-color: #ffffff;	
+	height: 50px; 
+	border-radius: 0px;
+	padding: 10px; 
+}
+
+div.breadcrumbs
+{
+font-size: 9pt;
+color: #8A8A8A;
+padding-top: 10px; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+font-weight: normal;
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+color:#0071b9;
+display: block;
+margin-top: 10px;
+}
+
+h1
+{
+font-size: 20pt;
+line-height: 25pt;
+margin-top: 15px;
+}
+
+/* Section title */
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+h2
+{
+color: #0071b9;
+font-size: 15pt;
+}
+
+/* Definition list title */
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+h3
+{
+color: #808284;
+font-size: 14pt;
+}
+
+a
+{
+color: #1C64B4;
+text-decoration: none;
+}
+
+a:hover
+{
+text-decoration: underline;
+}
+
+ol,
+ul,
+ol ol,
+ol ul
+{
+margin-right: 10px; 
+}
+
+ol,
+ul
+{
+padding-right: 25px;
+padding-top: 0px;
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+
+ol ol,
+ol ul
+{
+margin-top: 5px;
+}
+
+li
+{
+vertical-align: top;
+margin-bottom: 8px;
+}
+
+li img
+{
+vertical-align: top;
+}
+ol
+{
+	list-style: none;
+	counter-reset: section;
+}
+ol li:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  font-weight: 700;
+  float: right;
+  margin-right: -20px; 
+}
+
+/* [Kofax] 2017-Feb-02 MAS: Add numbered lists after bulleted items. For bug 842497. */
+ul ol li:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  font-weight: 700;
+  float: right;
+  margin-left: -20px; 
+}
+
+ul
+{
+	list-style: disc;
+}
+
+ul li:before
+{
+	counter-increment: none;
+	content: none;
+}
+ol li ol li:before
+{
+  color: #777777;
+}
+
+table ol,
+table ul
+{
+margin-right: 5px; 
+}
+
+pre
+{
+color: #000000;
+margin-top: 10px;
+margin-bottom: 10px;
+padding: 5px;
+background-color: #EBEBEB;
+}
+.draft-comment
+{
+display: none;
+}
+pre
+{
+border: 0px solid;
+border-radius: 0px; 
+}
+
+p,
+div.context,
+div.postreq,
+div.prereq,
+div.result,
+div.shortdesc
+{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+div.context p,
+div.postreq p,
+div.prereq p,
+div.result p,
+div.shortdesc p
+{
+	margin-top: 0px;
+	margin-bottom: 2px; 
+}
+
+div.info
+{
+}
+
+div.note,
+div.noteImportant,
+div.stepresult,
+div.stepxmp
+{
+font-style: normal;
+list-style: none;
+padding-right: 8px;
+display: block;
+text-indent: 0px;
+margin-right: 0px;
+padding-right: 0px;
+}
+
+.notecaption
+{
+	margin-right: 3px; 
+}
+
+li p
+{
+	margin-bottom: 0px; 
+	margin-top: 2px; 
+}
+
+
+.result
+{
+font-style: normal;
+margin-bottom: 5px;
+}
+
+table
+{
+display: block;
+border: solid 0px;
+border-color: #32323C;
+border-collapse: collapse;
+margin-bottom: 20px;
+margin-top: 20px;
+table-layout: fixed;
+width: 100%;
+}
+
+ol table,
+ul table
+{
+text-indent: 0px;
+}
+
+thead,
+tbody
+{
+width: 100%;
+}
+
+table tr,
+table tr td,
+table colgroup thead tr th,
+.table>thead>tr>th,
+td,
+th
+{
+border: solid 1px;
+border-color: #a5a5aa;
+border-collapse: collapse;
+vertical-align: top;
+padding: 10px;
+}
+
+th
+{
+text-align: right;
+font-weight: bold;
+font-size: 12pt;
+vertical-align: middle;
+color: #32323C;
+background-color: #ebebeb;
+}
+
+table.choicetable
+{
+	margin-bottom: 15px;
+}
+
+.choicetable tbody th
+{
+	font-size: 10pt; 
+	background-color: #ffffff;
+}
+
+td[colspan="2"], td[colspan="3"], td[colspan="4"], td[colspan="5"]
+{
+	font-weight: 700;
+	background-color: #f5f5f5
+}
+
+table p, table ol, table ul
+{
+	margin: 0px; 
+}
+table p
+{
+	padding: 0px; 
+}
+
+table pre
+{
+	margin-right: 10px;
+	margin-right: -10px;
+	word-break: keep-all;
+	word-wrap: break-word;
+}
+
+
+dt
+{
+font-weight: 700;
+display: block;
+margin-top: 10px;
+padding-bottom: 5px;
+}
+
+dt.dl_wrap
+{
+	float: right;
+	margin-top: 0px; 
+	padding-bottom: 0px; 
+	display: inline;
+	margin-right: 5px;
+	margin-right: 12px;	
+	padding-right: 5px;
+}
+
+dd
+{
+	margin-right: 12px;
+	padding-right: 5px; 
+}
+
+dd p
+{
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+}
+
+dl
+{
+margin-top: 6px;
+margin-bottom: 6px;
+}
+
+ol.step span.wintitle,
+ol.step span.uicontrol,
+span.menucascade span.uicontrol,
+table.choicetable span.uicontrol,
+table.choicetable span.wintitle,
+ul.steps-unordered span.uicontrol,
+ul.steps-unordered span.wintitle,
+span.notecaption,
+span.group,
+span.action
+{
+font-weight: 700;
+}
+
+h1 .uicontrol,
+h2 .uicontrol,
+h3 .uicontrol,
+h4 .uicontrol,
+h5 .uicontrol,
+h6 .uicontrol
+{
+font-weight: normal;
+}
+
+span.filepath,
+span.varname,
+span.em
+{
+	font-style: italic;
+}
+
+span.codeph,
+pre,
+span.systemoutput,
+span.userinput,
+span.msgph
+{
+font-family: 'Courier New';
+}
+
+
+
+figure img
+{
+max-width: 470px;
+}
+
+div.info div.note,
+div.info div.noteImportant
+{
+display: inline-block;
+}
+
+caption
+{
+	text-align: right; 
+}
+
+.strong
+{
+	font-weight: 700;
+}
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] 
+{
+	color: black;
+	background: none;
+	font-family: 'Courier New', monospace;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	text-shadow: 0 1px white;	
+}
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection, 
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: 0 1px white;
+	background: #f3f3f3;
+}
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: 0 1px white;
+	}
+}
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f3f3f3;
+}
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+.token.comment,
+.token.cdata 
+{
+	color: #00ad21;
+}
+.token.doctype 
+{
+	color: #000000;
+}
+.token.prolog {
+	color: #0061de;
+}
+.token.punctuation {
+	color: #000;
+}
+
+.namespace {
+}
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.selector {
+	color: #0061de;
+}
+.token.number,
+.token.attr-name
+{
+color: #d1202f;
+}
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.function
+ {
+	color: #7e7e85;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.regex,
+.token.important,
+.token.variable
+ {
+	color: #000000;
+}
+.token.property,
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.boolean {
+	color:  #1c64b4;
+}
+
+.token.attr-value
+{
+	color:  #884fad;
+	font-weight: 700;
+}
+.token.property,
+.token.keyword,
+.token.boolean
+{
+	font-weight: 700;
+}
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+}
+
+@media screen and (max-width: 900px) {
+
+h1.searchContainerTitle
+{
+	display: block;
+}
+
+button.searchTips
+{
+	margin-right: 0px; 
+	display: block;
+	float: none;
+	background-position: right top;
+}
+.dropdown.searchTips.open button.searchTips
+{
+background-position: right top;
+}
+.dropdown-menu.tips
+{
+	position: relative;
+}
+
+div.searchTips
+{
+	width: 100%;
+}
+
+
+
+.dropdown-menu.tips
+{
+	border: 0px solid #ffffff;
+	margin-right: 0px; 
+
+}
+
+}
+span.highlight
+{
+	display: inline-block;
+	background-color: #efffe5;
+}
+.dropdown-menu.tips p.search_info
+{
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.dropdown-menu.tips ul
+{
+	padding-right: 10px; 
+	text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+
+	nav[role=toc].active {
+	position: relative;
+	-webkit-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	right: -60%; 
+	position: absolute;
+	
+	width: 50%; 
+	}
+	nav.related-links.active
+	{
+	display: none;
+	}
+	nav[role=toc] {
+	top: 0;
+	right: 0%; 
+	width: 50%;
+	background-color: white;
+	margin-top: 60px;
+	position: absolute;
+	}
+
+	main
+	{
+	width: 100%;
+	right: 70%;
+	}
+	
+	div#wrapper
+	{
+	padding-right: 10px; 
+	padding-right: 10px; 
+	right: 55%;
+	padding-right: 10px;
+	margin-right: 10px; 
+	position: absolute;
+	top: 50px; 
+	}
+	
+	div#wrapper.active
+	{
+	position: absolute;
+	width: 90%;
+	right: 0%;
+	right: 30px; 
+	top: 50px; 
+	}
+	
+	a.logo
+	{
+	display: inline-block;
+	width: 150px;
+	padding-top: 10px; 
+	margin-right: 10px; 
+	}
+.searchInput
+{
+	width: 40%;
+	float: none;
+	clear: both;
+	position: absolute;
+	left: 0px; 
+}
+	#searchbox
+{
+	border: solid 2px #e7e7e7;
+	width: 70%;
+	left: 50px; 
+}
+.searchResults
+{
+	padding: 0px; 
+	padding-top: 10px; 
+}
+.searchResults div, h1.searchContainerTitle
+{
+	width: 100%;
+}
+.searchButton
+{
+	max-width: 20%;
+	margin-right: 10px; 
+}
+
+	
+	nav[role=toc] li
+	{
+		margin-top: 8px; 
+		margin-bottom: 6px;
+	}
+	div.headcontainer
+	{
+		width: 150%; 
+	}
+	div.headcontainer.active
+	{
+		width: 100%; 
+	}
+	.menu
+	{
+	display: none;
+	}
+	.footer
+	{
+	margin-right: -10px; 
+	margin-right: -10px; 
+	}
+	/*this makes the tables fit but squashes them horribly so I would rather they not fit*/
+	/*table
+	{
+		display: table;
+		width: 100%;
+		word-wrap: break-word;
+	}*/
+	
+	th
+	{
+		font-size: 11pt;
+	}
+}
+@media screen and (max-width: 400px) {
+
+	nav[role=toc] li
+	{
+		font-size: 12pt;
+	}
+	
+	nav[role=toc] ul
+	{
+		margin-right: 0px; 
+	}
+	.searchInput
+	{
+	display: block;
+	width: 100%;	
+	background-color: #f3f3f3;
+	padding: 5px; 
+	right: 0px; 
+	top: 60px; 
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+
+	}
+	#searchInput
+	{
+	width: 80%;
+	}
+	.searchButton
+	{
+	float: none;
+	}
+	div.headcontainer
+	{
+	height: 100px; 
+	
+	}
+	nav[role=toc]
+	{
+	margin-top: 110px;
+	padding-top: 5px; 
+	width: 70%;
+	}
+
+	div#wrapper
+	{
+	top: 150px; 
+	right: 80%;
+	}
+	div#wrapper.active
+	{
+	top: 95px; 
+	}
+	button.contextbutton
+	{ 
+	top: 120px; 
+	right: 75%;
+
+	}
+
+	button.contextbutton.active
+	{
+	top: 160px;
+	}
+	a.logo
+	{
+	width: 100%;
+	display: block;
+	margin:0px; 
+	height: 40px; 
+	float: none;
+	position: absolute; 
+	right: 10px;
+
+
+	}
+	.headcontainer.active a.logo
+	{
+		float: none; 
+	}
+}

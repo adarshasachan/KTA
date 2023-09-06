@@ -1,0 +1,1291 @@
+/*<meta />*/
+body
+{
+font-family: Arial;
+font-size: 10pt;
+margin: 0px;
+line-height: 1.7em;
+}
+
+header
+{
+}
+
+main
+{
+	visibility: hidden;
+}
+
+/* Contains the body and the footer */
+div#wrapper
+{
+display: inline-block;
+float: right;
+padding: 25px; 
+padding-top: 0px; 
+width: 78%;
+border-left: 1px solid #f3f3f3;
+min-height: 500px; 
+position: relative;
+}
+
+/* Positions the TOC */
+nav[role=toc]
+{
+bottom: 0px; 
+position: relative;
+float: left;
+width: 20%;
+padding-bottom: 10px; 
+padding-top: 10px; 
+
+}
+
+/* Footer formatting */
+.footer
+{
+display: block;
+margin-top: 20px;
+padding: 10px;
+font-size: .85em;
+border-top: 1px solid #e3e3e3;
+bottom: 5px;
+margin-left: -25px; 
+margin-right: -25px; 
+clear: both;
+}
+
+/* Close TOC button that appears when window is small enough for responsive formatting to kick in.  There is more specific formatting for it below in various places. */
+button.contextbutton
+{
+background: url("../images/leftarrow.png");
+background-repeat: no-repeat;
+display: block;
+height: 90%;
+width: 300px; 
+border: solid 0px white;
+position: absolute;
+left: 50%; 
+top: 65px; 
+z-index: 1;
+}
+
+/* Sets the color of links within the TOC and breadcrumbs */
+nav[role=toc] a, nav[role=toc] li.active ul li a, .breadcrumbs a
+{
+color: #777777;
+}
+
+/* Sets the hover and active colors of links within the TOC */
+nav[role=toc] a:hover, nav[role=toc] li.active a
+{
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+color: #0071b9;
+text-decoration: none;
+}
+
+/* TOC list item formatting */
+nav[role=toc] li
+{
+list-style: none;
+margin-left: -10px; 
+padding-top: 3px;
+padding-bottom: 0px;
+margin-bottom: 0px; 
+}
+
+/* Formatting for the navigation bar on the top of the page */
+.menu
+{
+	display: block;
+	vertical-align: middle;
+	position: relative;
+	/*background-color: #00C425;*/
+    /* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+	background-color: #0071b9;
+	/* [Kofax] 2017-Jan-13 MAS: Align left with TOC text for bug 761483. */
+	padding-left: 20px;
+	border-top: 2px solid #ffffff;
+	color: #ffffff; 
+	padding-top: 1px; 
+	padding-bottom: 1px; 
+	font-size: 11pt;
+	line-height: 35px; 
+}
+
+/* General formatting for the items within the navigation bar on the top of the page */
+.menu button, .menu span.menuLabel, .menu span.help
+{
+	border: 0px solid white;
+	background-color: transparent;
+	height: 35px; 
+	padding-right: 15px; 
+	padding-left: 15px; 
+	display: inline-block;
+	line-height: 35px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	
+}
+
+/* Formatting for the product name within the navigation bar */
+.menu span.menuLabel
+{
+	padding-left: 5px; 
+	padding-right: 30px; 
+	/* [Kofax] 2017-Jan-13 MAS: Removed white separator since it cannot line up with body content.
+	 * For bug 761483. */
+	/*border-right: 1px solid #ffffff;*/
+}
+.menu span.menuLabel a:hover
+{
+	background:transparent;
+}
+
+/* Formatting for the links within the navigation bar */
+.menu span.help
+{
+	padding-left: 15px; 
+	padding-right: 15px; 
+}
+.menu a
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/* Formatting for dropdown menus within the navigation bar */
+.menu .dropdown-menu
+{
+	border: 0px solid;
+	border-radius: 0px;
+	/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+	background-color: #0071b9;
+	font-size: 11pt;
+	color: #ffffff;
+	margin-top: 12px; 
+	padding: 0px; 
+}
+.menu li
+{
+	margin-bottom: 0px; 
+	margin-top: 0px; 
+
+}
+.menu .dropdown-menu li a
+{
+	color: #ffffff;
+	padding-bottom: 8px; 
+	padding-top: 8px;
+}
+.menu a:hover, .menu span.help:hover, .menu button:hover, .menu .dropdown-menu li a:hover
+{
+	/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+    background-color: #0071b9;
+	text-decoration: none;
+	cursor: pointer;
+	color: #ffffff;
+}
+
+/* [Kofax] 2017-Jan-13 MAS: Add yellow text color for hover to give a visual cue to users. */
+.menu button:hover, .menu .dropdown-menu li a:hover
+{
+    color: #fffb30;
+}
+
+/* Formatting for examples */
+.dropdown-menu.example
+{
+	position: relative; 
+	border-radius: 0px; 
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	padding: 10px;
+	padding-left: 25px; 
+	font-size: 10pt; 
+	margin: 0px; 
+	float: none;
+	background-color: #ffffff;
+	border: 0px solid #ffffff;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: -1px;
+}
+
+/* Removes the top margin from the first paragraph inside an example */
+.dropdown-menu.example p:first-child
+{
+	margin-top: 0px; 
+}
+
+/* Removes the bottom margin from the last paragraph inside an example */
+.dropdown-menu.example p:last-child
+{
+	margin-bottom: 0px; 
+}
+
+/* General button formatting. */
+button.exampleTitle, button.searchTips
+{
+	border: 0px solid #1C64B4;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	background: url("../images/dropdownopen.png");
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+    background-position: left center; 
+	padding: 5px; 
+	padding-left: 25px; 
+	border-radius: 1px; 
+	width: 100%;
+	-webkit-box-shadow: none;
+	font-weight: 600;
+	text-align: left;
+	margin-bottom: -1px;
+}
+
+/* Formatting for example titles */
+button.exampleTitle:hover
+{
+	border: 0px solid #777777;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+button.exampleTitle:focus, .dropdown.example.open button.exampleTitle
+{
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+.dropdown.example.open button.exampleTitle, .dropdown.example.open button.exampleTitle:hover
+{
+	border-bottom: 0px; 
+	background: url("../images/dropdownclose.png");
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left center;
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);		
+}
+
+/* Open TOC button that appears when responsive design is active and the TOC has been closed */
+button.contextbutton.active
+{
+background: url("../images/context.png");
+background-repeat: no-repeat;
+background-position: center; 
+display: block;
+height: 16px; 
+width: 20px; 
+border: solid 0px white;
+left: 0%;
+left: 5px; 
+top: 65px; 
+margin-bottom: 20px; 
+}
+
+/* Removes the outline from specific buttons when they have focus */
+button.contextbutton.active:focus, button.contextbutton:focus, .searchButton:focus, button.dropdownbutton:focus, button.exampleTitle:focus, button.searchTips:focus
+{
+	outline: 0px; 
+}
+
+/* Logo formatting */
+a.logo
+{
+display: inline-block;
+padding: 25px;
+margin-left: 16px; 
+padding-bottom: 5px; 
+height: 50px; 
+width: 200px; 
+clear: both;
+}
+
+/* Formatting for the search button */
+.searchButton
+{
+	background-color: transparent;
+	background-image: url("../images/search-white.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	width: 20px;
+	height: 28px;
+	margin-left: 10px; 
+	border: solid 0px #ffffff;
+	display: inline-block;
+}
+
+/* Contains the search button and search input field */
+.searchInput
+{
+padding-bottom: 15px; 
+display: inline-block;
+float: right;
+width: 30%;
+}
+
+/* Formatting for the search text input field */
+#searchbox
+{
+	border: solid 2px #e7e7e7;
+	width: 80%;
+	right: 50px; 
+	line-height: 1; 
+	padding: 5px; 
+}
+
+/* Formatting for the search tips button*/
+button.searchTips
+{
+border: 0px solid #1C64B4;
+	vertical-align: top;
+    font-size: smaller;
+	border: 0px; 
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+	margin-top: -10px;
+	padding: 0px; 
+	background-color: transparent;
+	background-image: url("../images/tip.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: inline-block;
+	width: 50px; 
+	height: 30px; 
+	float: right;
+}
+
+/* Formatting for the search tips button when open */
+.dropdown.searchTips.open button.searchTips
+{
+	background-image: url("../images/tip-close.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+/* Formatting for the search tips inside the dropdown */
+.dropdown-menu.tips
+{
+	border-radius: 0px; 
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	font-size: 10pt; 
+	margin: 0px; 
+	border: solid 1px #e7e7e7;
+	margin-bottom: -1px;
+	width: 100%;
+	float: right;
+	padding: 10px; 
+	margin-left: 10px; 
+}
+.dropdown-menu.tips p
+{
+	margin-top: 0px; 
+	margin-bottom: 2px; 
+	padding-left: 5px; 
+}
+.dropup.searchTips.open .tips
+{
+	display: block;
+}
+div.tips
+{
+	
+}
+/* Formatting for all input fields */
+input
+{
+	vertical-align: top;
+}
+
+/* Formatting for the search results */
+.searchResults 
+{
+	padding: 10px; 
+	padding-top: 20px; 
+	color: #777777;
+}
+
+/* Formatting for no search results */
+.noResults
+{
+	padding: 5px; 
+	margin: 5px; 
+}
+
+/* Contains search results */
+.searchResults div
+{
+	margin-top: 10px; 
+	margin-bottom: 20px; 
+	width: 65%;
+}
+
+/* Contains search tips */
+div.searchTips
+{
+	display: inline-block;
+	margin-top: 0px; 
+	padding-top: 0px;
+	margin-top: 2px; 
+	margin-bottom: 2px; 
+	width: 35%;
+}
+
+/* Contains search tips and search heading */
+#searchTips
+{
+	margin: 0px; 
+	width: 100%;
+}
+
+/* Formatting for the topic links in the search results */
+.searchlink
+{
+	color: #008fd6;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+/* Formatting for the search heading */
+h1.searchContainerTitle
+{
+	color: #777777;
+	font-size: 15pt; 
+	margin-top: 0px; 
+	margin-bottom: 15px; 
+	display: inline-block;
+	width: 65%;
+}
+
+/* Bolds the search term and number of results in the search heading */
+.searchemphasis
+{
+	font-weight: 700;
+}
+
+/* I don't think we ended up using this */
+.summaryemphasis
+{
+	color: #000000;
+}
+
+/* Formatting for the short description inside search results */
+div.summary
+{
+	font-size: 13px; 
+	color: #777777;
+	margin-top: 2px; 
+	margin-bottom: 2px; 
+	width: 100%;
+	padding-right: 10px; 
+}
+
+/* Contains the logo, search bar, and show/hide TOC buttons */
+div.headcontainer
+{
+	padding-top: 10px;
+	background-color: #ffffff;	
+	height: 50px; 
+	border-radius: 0px;
+	padding: 10px; 
+}
+
+/* Formatting for the breadcrumbs */
+div.breadcrumbs
+{
+font-size: 9pt;
+color: #8A8A8A;
+padding-top: 10px; 
+}
+
+/* General heading formatting */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+font-weight: normal;
+/*color: #32323C;*/
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+color:#0071b9;
+display: block;
+margin-top: 10px;
+}
+
+/* Topic title */
+h1
+{
+font-size: 20pt;
+line-height: 25pt;
+margin-top: 15px;
+}
+
+/* Section title */
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+h2
+{
+color: #0071b9;
+font-size: 15pt;
+}
+
+/* Definition list title */
+/* [Kofax] 2017-Jan-11 MAS: Apply corporate branding.*/
+h3
+{
+color: #808284;
+font-size: 14pt;
+}
+
+/* General link formatting */
+a
+{
+color: #1C64B4;
+text-decoration: none;
+}
+a:hover
+{
+text-decoration: underline;
+}
+
+/* General list formatting */
+ol,
+ul,
+ol ol,
+ol ul
+{
+margin-left: 10px; 
+}
+ol,
+ul
+{
+padding-left: 25px;
+padding-top: 0px;
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+ol ol,
+ol ul
+{
+margin-top: 5px;
+}
+li
+{
+vertical-align: top;
+margin-bottom: 8px;
+}
+li img
+{
+vertical-align: top;
+}
+ol
+{
+	list-style: none;
+	counter-reset: section;
+}
+ol li:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  font-weight: 700;
+  float: left;
+  margin-left: -20px; 
+}
+
+/* [Kofax] 2017-Feb-02 MAS: Add numbered lists after bulleted items. For bug 842497. */
+ul ol li:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  font-weight: 700;
+  float: left;
+  margin-left: -20px; 
+}
+
+ol li ol li:before
+{
+  color: #777777;
+}
+ul
+{
+	list-style: disc;
+}
+ul li:before
+{
+	counter-increment: none;
+	content: none;
+}
+
+/* Formatting for lists within tables */
+table ol,
+table ul
+{
+margin-left: 5px; 
+}
+
+/* Used for codeblocks when prism isn't in effect */
+pre
+{
+color: #000000;
+margin-top: 10px;
+margin-bottom: 10px;
+padding: 5px;
+background-color: #EBEBEB;
+}
+
+/* Hides your draft comments from people who don't look at the source code */
+.draft-comment
+{
+display: none;
+}
+
+/* Used for codeblocks when prism isn't in effect */
+pre
+{
+border: 0px solid;
+border-radius: 0px; 
+}
+
+/* Margins for paragraphs and divs that are within topic text */
+p,
+div.context,
+div.postreq,
+div.prereq,
+div.result,
+div.shortdesc
+{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+/* Margins for paragraphs within divs that are within topic text */
+div.context p,
+div.postreq p,
+div.prereq p,
+div.result p,
+div.shortdesc p
+{
+	margin-top: 0px;
+	margin-bottom: 2px; 
+}
+
+div.info
+{
+}
+
+/* Formatting for notes, step results, step examples */
+div.note,
+div.noteImportant,
+div.stepresult,
+div.stepxmp
+{
+font-style: normal;
+list-style: none;
+padding-left: 8px;
+display: block;
+text-indent: 0px;
+margin-left: 0px;
+padding-left: 0px;
+}
+
+/* Formatting for the label on notes */
+.notecaption
+{
+	margin-right: 3px; 
+}
+
+/* Margins for paragraphs within list items */
+li p
+{
+	margin-bottom: 0px; 
+	margin-top: 2px; 
+}
+
+/* Formatting for the result element */
+.result
+{
+font-style: normal;
+margin-bottom: 5px;
+}
+
+/* General table formatting */
+table
+{
+display: block;
+border: solid 0px;
+border-color: #32323C;
+border-collapse: collapse;
+margin-bottom: 20px;
+margin-top: 20px;
+table-layout: fixed;
+width: 100%;
+}
+
+/* Formatting for tables that are within lists */
+ol table,
+ul table
+{
+text-indent: 0px;
+}
+
+/* General table formatting */
+thead,
+tbody
+{
+width: 100%;
+}
+table tr,
+table tr td,
+table colgroup thead tr th,
+.table>thead>tr>th,
+td,
+th
+{
+border: solid 1px;
+border-color: #a5a5aa;
+border-collapse: collapse;
+vertical-align: top;
+padding: 10px;
+}
+th
+{
+text-align: left;
+font-weight: bold;
+font-size: 12pt;
+vertical-align: middle;
+color: #32323C;
+background-color: #ebebeb;
+}
+
+/* Formatting for choice-tables */
+table.choicetable
+{
+	margin-bottom: 15px;
+}
+.choicetable tbody th
+{
+	font-size: 10pt; 
+	background-color: #ffffff;
+}
+
+/* Formatting for merged columns in tables that act as headings */
+td[colspan="2"], td[colspan="3"], td[colspan="4"], td[colspan="5"]
+{
+	font-weight: 700;
+	background-color: #f5f5f5
+}
+
+/* General table formatting */
+table p, table ol, table ul
+{
+	margin: 0px; 
+}
+table p
+{
+	padding: 0px; 
+}
+
+/* Formatting for codeblocks within tables - forces word breaks */
+table pre
+{
+	margin-left: 10px;
+	margin-right: -10px;
+	word-break: keep-all;
+	word-wrap: break-word;
+}
+
+/* Definition list formatting. */
+dt
+{
+font-weight: 700;
+display: block;
+margin-top: 10px;
+padding-bottom: 5px;
+}
+
+dt.dl_wrap
+{
+	float: left;
+	margin-top: 0px; 
+	padding-bottom: 0px; 
+	display: inline;
+	margin-right: 5px;
+	margin-left: 12px;	
+	padding-left: 5px;
+}
+
+dd
+{
+	margin-left: 12px;
+	padding-left: 5px; 
+}
+
+dd p
+{
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+}
+
+dl
+{
+margin-top: 6px;
+margin-bottom: 6px;
+}
+
+/* Makes specific elements bold */
+ol.step span.wintitle,
+ol.step span.uicontrol,
+span.menucascade span.uicontrol,
+table.choicetable span.uicontrol,
+table.choicetable span.wintitle,
+ul.steps-unordered span.uicontrol,
+ul.steps-unordered span.wintitle,
+span.notecaption,
+span.group,
+span.action
+{
+font-weight: 700;
+}
+
+/* Overrides uicontrol bolding when uicontrol is within a heading */
+h1 .uicontrol,
+h2 .uicontrol,
+h3 .uicontrol,
+h4 .uicontrol,
+h5 .uicontrol,
+h6 .uicontrol
+{
+font-weight: normal;
+}
+
+/* Makes specific elements italic */
+span.filepath,
+span.varname,
+span.em
+{
+	font-style: italic;
+}
+
+/* Changes the font in specific elements to courier new */
+span.codeph,
+pre,
+span.systemoutput,
+span.userinput,
+span.msgph
+{
+font-family: 'Courier New';
+}
+
+/* Stops images inside a figure from being over 470px wide */
+figure img
+{
+max-width: 470px;
+}
+
+/* Keeps notes inline with the info element */
+div.info div.note,
+div.info div.noteImportant
+{
+display: inline-block;
+}
+
+/* Bolds elements with a class of strong */
+.strong
+{
+	font-weight: 700;
+}
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+ 
+/* General prism formatting */
+code[class*="language-"],
+pre[class*="language-"] 
+{
+	color: black;
+	background: none;
+	font-family: 'Courier New', monospace;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	text-shadow: 0 1px white;	
+}
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection, 
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: 0 1px white;
+	background: #f3f3f3;
+}
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: 0 1px white;
+	}
+}
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f3f3f3;
+}
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+/* Formatting for color changes within codeblocks */
+.token.comment,
+.token.cdata 
+{
+	color: #00ad21;
+}
+.token.doctype 
+{
+	color: #000000;
+}
+.token.prolog {
+	color: #0061de;
+}
+.token.punctuation {
+	color: #000;
+}
+
+.namespace {
+}
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.selector {
+	color: #0061de;
+}
+.token.number,
+.token.attr-name
+{
+color: #d1202f;
+}
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.function
+ {
+	color: #7e7e85;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.regex,
+.token.important,
+.token.variable
+ {
+	color: #000000;
+}
+.token.property,
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.boolean {
+	color:  #1c64b4;
+}
+
+.token.attr-value
+{
+	color:  #884fad;
+	font-weight: 700;
+}
+.token.property,
+.token.keyword,
+.token.boolean
+{
+	font-weight: 700;
+}
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+}
+
+span.highlight
+{
+	display: inline-block;
+	background-color: #efffe5;
+}
+.dropdown-menu.tips p.search_info
+{
+	margin-bottom: 10px; 
+}
+
+.dropdown-menu.tips ul
+{
+	padding-left: 10px; 
+}
+
+/* Everything below this point is responsive formatting. Edit at your own risk! */
+
+/* Responsive formatting for screens below 900px */
+@media screen and (max-width: 900px) {
+
+/* search heading */
+h1.searchContainerTitle
+{
+	display: block;
+}
+
+/* search tips button */
+button.searchTips
+{
+	margin-left: 0px; 
+	display: block;
+	float: none;
+	background-position: left top;
+}
+/* search tips */
+.dropdown.searchTips.open button.searchTips
+{
+	background-position: left top;
+}
+.dropdown-menu.tips
+{
+	position: relative;
+}
+
+div.searchTips
+{
+	width: 100%;
+}
+
+.dropdown-menu.tips
+{
+	border: 0px solid #ffffff;
+	margin-left: 0px; 
+}
+
+} /* ends responsive formatting for 900px */
+
+/* begins responsive formatting for screens below 767px */
+@media screen and (max-width: 767px) {
+
+/* Positioning for show/hide TOC */
+	nav[role=toc].active {
+	position: relative;
+	-webkit-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	left: -60%; 
+	position: absolute;
+	width: 50%; 
+	}
+	nav.related-links.active
+	{
+	display: none;
+	}
+	nav[role=toc] {
+	top: 0;
+	left: 0%; 
+	width: 50%;
+	background-color: white;
+	margin-top: 60px;
+	position: absolute;
+	}
+
+	main
+	{
+	width: 100%;
+	left: 70%;
+	}
+	
+	/* wrapper when toc is visible */
+	div#wrapper
+	{
+	padding-left: 10px; 
+	padding-right: 10px; 
+	left: 55%;
+	padding-left: 10px;
+	margin-left: 10px; 
+	position: absolute;
+	top: 50px; 
+	}
+	
+	/* wrapper when toc is hidden */
+	div#wrapper.active
+	{
+	position: absolute;
+	width: 90%;
+	left: 0%;
+	left: 30px; 
+	top: 50px; 
+	}
+	
+	a.logo
+	{
+	display: inline-block;
+	width: 150px;
+	padding-top: 10px; 
+	margin-left: 10px; 
+	}
+.searchInput
+{
+	width: 40%;
+	float: none;
+	clear: both;
+	position: absolute;
+	right: 0px; 
+}
+
+/* Search section formatting that displays only in this screen size and below */
+	#searchbox
+{
+	border: solid 2px #e7e7e7;
+	width: 70%;
+	right: 50px; 
+}
+.searchResults
+{
+	padding: 0px; 
+	padding-top: 10px; 
+}
+.searchResults div, h1.searchContainerTitle
+{
+	width: 100%;
+}
+.searchButton
+{
+	max-width: 20%;
+	margin-left: 10px; 
+}
+
+	
+	nav[role=toc] li
+	{
+		margin-top: 8px; 
+		margin-bottom: 6px;
+	}
+	div.headcontainer
+	{
+		width: 150%; 
+	}
+	div.headcontainer.active
+	{
+		width: 100%; 
+	}
+	.menu
+	{
+	display: none;
+	}
+	.footer
+	{
+	margin-left: -10px; 
+	margin-right: -10px; 
+	}
+	/*this makes the tables fit but squashes them horribly so I would rather they not fit*/
+	/*table
+	{
+		display: table;
+		width: 100%;
+		word-wrap: break-word;
+	}*/
+	
+	th
+	{
+		font-size: 11pt;
+	}
+} 
+
+/* responsive formatting for screens below 400px */
+@media screen and (max-width: 400px) {
+
+	nav[role=toc] li
+	{
+		font-size: 12pt;
+	}
+	
+	nav[role=toc] ul
+	{
+		margin-left: 0px; 
+	}
+	
+	/* Search section formatting that displays only in this screen size and below */
+	.searchInput
+	{
+	display: block;
+	width: 100%;	
+	background-color: #f3f3f3;
+	padding: 5px; 
+	left: 0px; 
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	}
+	#searchInput
+	{
+	width: 80%;
+	}
+	.searchButton
+	{
+	float: none;
+	}
+	div.headcontainer
+	{
+	height: 100px; 
+	
+	}
+	nav[role=toc]
+	{
+	margin-top: 100px;
+	padding-top: 5px; 
+	width: 70%;
+	}
+
+	div#wrapper
+	{
+	top: 95px; 
+	left: 80%;
+	}
+	div#wrapper.active
+	{
+	top: 95px; 
+	}
+	button.contextbutton
+	{ 
+	top: 110px; 
+	left: 75%;
+
+	}
+
+	button.contextbutton.active
+	{
+	top: 110px;
+	}
+	a.logo
+	{
+	width: 100%;
+	display: block;
+	margin:0px; 
+	height: 40px; 
+	
+
+	}
+}

@@ -1,0 +1,12 @@
+Example of EVRS
+
+"If you set Image Enhancement Setting and Delete Blank Pages to Yes, and scan a group of blank and non blank pages, not all blank pages are removed. 
+To avoid this issue, set the EVRS Settings for image profile as:"
+ 
+<PropertyName="CBlkPage.Min_Count_Edge.Int" Value="300" Comment="DEFAULT 75" /> 
+
+"Other settings:"
+
+_DoBackgroundSmoothing_
+_Do90DegreeRotation_n (for n = 1,2,3 when automatic rotation is disabled)
+_DoDespeck_n
